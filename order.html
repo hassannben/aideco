@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب الشراء</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>متجر إلكتروني</h1>
+    </header>
+
+    <main>
+        <section id="product-details" class="product-details-container">
+            <!-- تفاصيل المنتج ستظهر هنا -->
+            <div class="product-card">
+               
+                <h3>اسم المنتج</h3>
+                <p>وصف قصير للمنتج</p>
+                <span>السعر: 100 د.ج</span>
+            </div>
+        </section>
+
+        <section class="order-form-container">
+            <h2>طلب الشراء</h2>
+            <form id="orderForm" action="https://script.google.com/macros/s/AKfycbyipcoqqRFSG60QhUcNCO4T32BwwdVq9xpU3LAnfr5esggXG8F25FeMYwOn0aBaMZBK/exec" method="POST" onsubmit="submitOrder(event)">
+                <input type="hidden" id="product-id" name="product-id">
+               
+             
+                <input type="text" id="name" name="name" placeholder="الاسم و اللقب" required>
+        
+         
+                <input type="tel" id="phone" name="phone" placeholder="رقم الهاتف" required style="direction: rtl; text-align: right;">
+        
+              
+                <select id="city" name="city" required>
+                  <option value="" disabled selected>اختر الولاية</option>
+                  <option value="الجزائر">الجزائر</option>
+                  <option value="وهران">وهران</option>
+                  <option value="قسنطينة">قسنطينة</option>
+                  <option value="تيزي وزو">تيزي وزو</option>
+                  <option value="البرج">البرج</option>
+                  <option value="الشلف">الشلف</option>
+                  <option value="المدية">المدية</option>
+                  <option value="سعيدة">سعيدة</option>
+                  <option value="خنشلة">خنشلة</option>
+                </select>
+        
+              
+                <input type="text" id="address" name="address" placeholder="العنوان" required>
+        
+           
+                <input type="number" id="quantity" name="quantity" placeholder="الكمية" min="1" required>
+        
+                <label for="deliveryCost">تكلفة التوصيل</label>
+                <input type="text" id="deliveryCost" name="deliveryCost" placeholder="تكلفة التوصيل" readonly>
+              
+                <input type="text" id="total" name="total" placeholder="المجموع" readonly> 
+        
+                <input type="hidden" id="date" name="date">
+                <input type="hidden" id="time" name="time">
+        
+                <input type="submit" value="تأكيد الطلب">
+            </form>
+        </section>
+
+        <section>
+            <h2>منتجات أخرى</h2>
+            <div id="data-container" class="products-grid">
+                <!-- سيتم عرض المنتجات هنا بواسطة JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 متجر إلكتروني. جميع الحقوق محفوظة.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>متجر إلكتروني متجاوب</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1> مرحبا بك في متجرنا </h1>
+      
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="ابحث عن المنتج..." oninput="filterProducts()">
+            <button onclick="filterProducts()">بحث</button>
+        </div>
+    </header>
+    
+    <main>
+        <h1>قائمة المنتجات</h1>
+        <section id="data-container" class="products-grid">
+            <!-- سيتم عرض المنتجات هنا بواسطة JavaScript -->
+        </section>
+    </main>
+
+    
+        <div class="footer-content">
+            <p>&copy; 2024 متجر إلكتروني. جميع الحقوق محفوظة.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">عن المتجر</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                    <li><a href="#">سياسة الخصوصية</a></li>
+                </ul>
+                 <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        </div>
+
+            </nav>
+        </div>
+       
+
+    <script src="script.js"></script>
+</body>
+
+</html>
